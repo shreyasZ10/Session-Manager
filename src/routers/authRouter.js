@@ -43,7 +43,7 @@ authRouter.route('/signIn')
     }));
 
 authRouter.route('/profile').get((req, res) =>{
-    res.json(req.user);
+    res.json(req.user.username);
 });
 
 module.exports = authRouter;
