@@ -9,7 +9,7 @@ const authRouter = express.Router();
 authRouter.route('/signUp').post((req, res) => {
     const {username, password} = req.body;
     const url = process.env.MONGODB_URL;
-    const dbName = process.env.MONGODB_URL;
+    const dbName = process.env.MONGODB_DATABASE;
 
     (async function addUser() {
         let client;

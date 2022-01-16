@@ -14,7 +14,7 @@ sessionsRouter.use((req, res, next) => {
 
 sessionsRouter.route('/').get((req, res) => {
     const url = process.env.MONGODB_URL;
-    const dbName = process.env.MONGODB_URL;
+    const dbName = process.env.MONGODB_DATABASE;
     
     (async function mongo() {
         let client;
